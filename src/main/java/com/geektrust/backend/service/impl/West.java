@@ -1,14 +1,11 @@
 package com.geektrust.backend.service.impl;
 
-import com.geektrust.backend.service.PowerOfGMan;
+import com.geektrust.backend.service.AbstractGManPowerCalculatorService;
 
-public class West implements PowerOfGMan {
-
-    public int calcultethePowerOfGman(int sour_x,int sour_y,int des_x,int des_y){
-        int diffX=sour_x - des_x;
-        int diffY=sour_y - des_y;
-       
-        int numberOfSteps=Math.abs(diffX)+Math.abs(diffY);
+public class West  extends AbstractGManPowerCalculatorService {
+    
+    @Override
+    public int getMinimumNumberOfRotations(int diffX, int diffY) {
         int numOfDirections=0;
         
         if(diffX==0 && diffY==0) numOfDirections = 0;
@@ -16,13 +13,8 @@ public class West implements PowerOfGMan {
         else if(diffX<0){ numOfDirections= 2;}
         else{ numOfDirections= 1; }
         
-        int totalGmanPowerReduced=(numberOfSteps*10)+(numOfDirections*5);
-        int remainingPower=200-totalGmanPowerReduced;
-        return remainingPower;
+        return numOfDirections;
     }
 
-   
-
-    
 
 }
