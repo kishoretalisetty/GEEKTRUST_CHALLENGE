@@ -9,18 +9,8 @@ public class East extends AbstractGManPowerCalculatorService {
     public int getMinimumNumberOfRotations(Axis axis){
         int numOfDirections=1;
 
-        switch (axis) {
-            case POSITIVE_X_AXIS :
-                numOfDirections = 0;
-                break;
-            case Q2 :
-            case NEGATIVE_X_AXIS :
-            case Q3 :
-                numOfDirections = 2;
-                break;
-            default:
-                break;
-        }
+        if(axis == Axis.POSITIVE_X_AXIS) numOfDirections = 0;
+        if(axis == Axis.NEGATIVE_X_AXIS || axis == Axis.Q2 || axis == Axis.Q3) numOfDirections =2;
         
         return numOfDirections;
     }
