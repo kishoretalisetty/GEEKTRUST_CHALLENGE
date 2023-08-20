@@ -3,7 +3,7 @@ package com.geektrust.backend.service;
 import com.geektrust.backend.constant.AppConstant;
 
 public abstract class AbstractGManPowerCalculatorService {
-    public int calcultePower(int srcX, int srcY, int destX, int destY) {
+    public int calculatePower(int srcX, int srcY, int destX, int destY) {
         int diffX=srcX - destX;
         int diffY=srcY - destY;
        

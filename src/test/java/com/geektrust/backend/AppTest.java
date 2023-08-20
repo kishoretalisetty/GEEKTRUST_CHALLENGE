@@ -18,41 +18,46 @@ class AppTest {
     }
 
     @Test
-    public void EastDirctionTest(){
+    public void eastDirectionTest(){
         CalculatePowerOfGManFactory cFactory=new CalculatePowerOfGManFactory();
         AbstractGManPowerCalculatorService pGMan=cFactory.getInstance('E');
-        int actual= pGMan.calcultePower(2, 1, 4, 3);
+        int actual= pGMan.calculatePower(2, 1, 4, 3);
         int expected=155;
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void WestDirctionTest(){
+    public void westDirectionTest(){
         CalculatePowerOfGManFactory cFactory=new CalculatePowerOfGManFactory();
         AbstractGManPowerCalculatorService pGMan=cFactory.getInstance('W');
-        int actual= pGMan.calcultePower(0, 5, 6, 1);
+        int actual= pGMan.calculatePower(0, 5, 6, 1);
         int expected=90;
         Assertions.assertEquals(expected, actual);
     }
 
     
     @Test
-    public void NorthDirctionTest(){
+    public void northDirectionTest(){
         CalculatePowerOfGManFactory cFactory=new CalculatePowerOfGManFactory();
         AbstractGManPowerCalculatorService pGMan=cFactory.getInstance('N');
-        int actual= pGMan.calcultePower(3, 6, 1, 0);
+        int actual= pGMan.calculatePower(3, 6, 1, 0);
         int expected=110;
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void SouthDirctionTest(){
+    public void southDirectionTest(){
         CalculatePowerOfGManFactory cFactory=new CalculatePowerOfGManFactory();
         AbstractGManPowerCalculatorService pGMan=cFactory.getInstance('S');
-        int actual= pGMan.calcultePower(3, 6, 3, 6);
+        int actual= pGMan.calculatePower(3, 6, 3, 6);
         int expected=200;
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    public void integrationTest() {
+        String[] args = new String[]{"src/input.txt"};
+        App.main(args);
+    }
 
 }

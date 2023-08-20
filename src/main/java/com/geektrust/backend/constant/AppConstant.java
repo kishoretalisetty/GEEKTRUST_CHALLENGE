@@ -12,4 +12,8 @@ public class AppConstant {
     public static final char WEST = 'W';
     public static final char NORTH = 'N';
     public static final char SOUTH = 'S';
+
+    public static final String CMD_SOURCE = "SOURCE";
+    public static final String CMD_DEST = "DESTINATION";
+    public static final String CMD_PRINT_POWER = "PRINT_POWER";
 }
