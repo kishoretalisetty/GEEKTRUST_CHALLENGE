@@ -28,8 +28,6 @@ public abstract class AbstractGManPowerCalculatorService {
         return diffX == DIFF_ZERO && diffY == DIFF_ZERO;
     }
 
-
-
     public Axis getAxis(int diffX, int diffY) {
         if(diffX == DIFF_ZERO && diffY < DIFF_ZERO) return Axis.POSITIVE_Y_AXIS;
         if(diffX == DIFF_ZERO && diffY > DIFF_ZERO) return Axis.NEGATIVE_Y_AXIS;
