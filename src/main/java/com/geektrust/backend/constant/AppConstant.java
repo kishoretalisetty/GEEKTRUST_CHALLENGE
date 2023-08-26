@@ -16,4 +16,5 @@ public class AppConstant {
     public static final String CMD_SOURCE = "SOURCE";
     public static final String CMD_DEST = "DESTINATION";
     public static final String CMD_PRINT_POWER = "PRINT_POWER";
+    public static final int INVALID_BEHAVIOUR = -1;
 }
